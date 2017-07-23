@@ -1,15 +1,17 @@
 import React, {Component} from 'react';
 import PropTypes from 'prop-types';
 
+// import './SpecialCircle.css';
 
-class Circle extends Component {
+class SpecialCircle extends Component {
 
     static propTypes = {
         color: PropTypes.string.isRequired,
+        setActiveColor: PropTypes.func.isRequired,
         size: PropTypes.string.isRequired,
-        setCircleColor: PropTypes.func.isRequired,
-        rowIndex: PropTypes.number.isRequired,
-        circleIndex: PropTypes.number.isRequired
+        css: PropTypes.object,
+        activeColor: PropTypes.string.isRequired
+
     };
 
     render() {
@@ -18,6 +20,7 @@ class Circle extends Component {
         const circleStyle = this.props.css !== undefined ? {
             ...this.props.css,
         } : {};
+
         if (this.props.size === 'big') {
             circleStyle.backgroundColor = this.props.color;
             circleStyle.margin = '0 0.25rem';
@@ -28,18 +31,21 @@ class Circle extends Component {
             circleStyle.width = smallSize;
             circleStyle.height = smallSize;
         }
-        // rowIndex, columnIndex,color
-        let rowIndex = this.props.rowIndex;
-        let circleIndex = this.props.circleIndex;
+        let activeStyling;
+        if (this.props.color === this.props.activeColor) {
+            activeStyling = "circle active-circle";
+        } else {
+            activeStyling = "circle"
+        }
         return (
             <div
-                className="circle"
+                className={activeStyling}
                 style={circleStyle}
-                onClick={() => this.props.setCircleColor(rowIndex, circleIndex)}
+                onClick={() => this.props.setActiveColor(this.props.color)}
             />
         );
 
     }
 }
 
-export default Circle;
+export default SpecialCircle;

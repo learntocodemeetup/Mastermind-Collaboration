@@ -4,21 +4,25 @@ import './index.css';
 import App from './App';
 import registerServiceWorker from './registerServiceWorker';
 
-const colorCircles = ['green', 'blue', 'red', 'yellow','black','pink', 'white']
+let colorCircles = ['red', 'orange', 'yellow', 'green', 'blue', 'indigo ']
 
 function createMastermindArray () {
   const rowLength= 4;
   var mastermindArray=[];
-  for (let i=0;i<rowLength;i++){
-    var color = colorCircles[Math.floor(Math.random()*6)]
+  for (let i=0; i < rowLength; i++) {
+    let color = colorCircles[Math.floor(Math.random() * 6)]
     mastermindArray.push(color)
   }
   return mastermindArray;
 }
 
+var mastermindArray = createMastermindArray();
+
 ReactDOM.render(
   <App
-    colorCircles = {colorCircles}
-    mastermindArray = {createMastermindArray()}
-  />, document.getElementById('root'));
+    colorCircles={colorCircles}
+    mastermindArray={["blue", "blue", "red", "green"]}
+  />,
+  document.getElementById('root')
+);
 registerServiceWorker();
