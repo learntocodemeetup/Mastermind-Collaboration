@@ -7,42 +7,38 @@ import './index.css';
 
 const rowsHeight = 10;
 const rowsLength = 4;
-var initialRowSetUp = [];
-for (let i=0; i< rowsHeight;i++){
-  initialRowSetUp[i]=[]
-  for (let j=0; j< rowsLength;j++){
-    initialRowSetUp[i][j] = 'white';
-  }
+let initialRowSetUp = [];
+for (let i = 0; i < rowsHeight; i++) {
+    initialRowSetUp[i] = [];
+    for (let j = 0; j < rowsLength; j++) {
+        initialRowSetUp[i][j] = 'white';
+    }
 }
-
-var precise;
-var partial;
-
 
 class App extends Component {
 
     constructor(props) {
         super(props);
-        console.log(`initial mastermind layout`, this.state.mastermindLayout)
-
+        this.state = {
+            mastermindLayout: initialRowSetUp,
+            activeColor: 'red',
+            activeRow: 0,
+            winner: false,
+            precise: 0,
+            partial: 0
+        };
+        console.log(`initial mastermind layout`, this.state.mastermindLayout);
     }
-    state = {
-        mastermindLayout: initialRowSetUp,
-        activeColor: 'red',
-        activeRow: 0,
-        winner: false,
-        precise: 0,
-        partial: 0
-    }
 
-    setActiveColor = (color) => {
+    setActiveColor(color) {
         this.setState({activeColor: color})
-    }
+    };
 
-    setCircleColor = (rowIndex, columnIndex) => {
-        if (rowIndex == this.state.activeRow) {
-            this.state.mastermindLayout[rowIndex][columnIndex] = this.state.activeColor;
-            this.setState(this.state);
+    setCircleColor(rowIndex, columnIndex) {
+        let mastermindArray = this.state.mastermindLayout;
+        mastermindArray[rowIndex][columnIndex] = this.state.activeColor;
+        if (rowIndex === this.state.activeRow) {
+            this.setState({mastermindLayout: mastermindArray});
         }
 
 
@@ -59,82 +55,79 @@ class App extends Component {
         //
         // });
 
-    }
+    };
 
-    comparisonCheck = () => {
+    comparisonCheck() {
 
-    this.state.precise = 0;
-    this.state.partial = 0;
+        let precise = 0;
+        let partial = 0;
+        let activeRow =  this.state.activeRow;
 
-    const checkColor = [false, false, false, false];
-      //Guess is used temporarily, next steps, get color from user store in activerow
-      //var Guess = ["red", "yellow", "red", "indigo"];
-      console.log("active row is:", this.state.mastermindLayout[this.state.activeRow]);
-      var guess=this.state.mastermindLayout[this.state.activeRow];
-      // debugger;
-      for (let i = 0; i < guess.length; i++) {
-          if (guess[i] === this.props.mastermindArray[i]) {
-              this.state.precise += 1;
-              console.log("It gets to the magical place")
-          }
-          for (let j=0; j< this.props.mastermindArray.length; j++){
-
-            if (guess[i] === this.props.mastermindArray[j]) {
-                for(let k=0; k < this.props.mastermindArray.length;k++){
-                    if(guess[i] === this.props.mastermindArray[k] && checkColor[k]===false){
-
-                      checkColor[k]=true;
-
-                      this.state.partial += 1;
-                      console.log("It gets to the second place", partial);
-                      break;
-                    }
-                }
-                break;
+        const checkColor = [false, false, false, false];
+        //Guess is used temporarily, next steps, get color from user store in activerow
+        //var Guess = ["red", "yellow", "red", "indigo"];
+        console.log("active row is:", this.state.mastermindLayout[this.state.activeRow]);
+        let guess = this.state.mastermindLayout[this.state.activeRow];
+        // debugger;
+        for (let i = 0; i < guess.length; i++) {
+            if (guess[i] === this.props.mastermindArray[i]) {
+                precise += 1;
             }
-          }
-      }
-      this.state.partial = Math.max(this.state.partial - this.state.precise, 0);
+            for (let j = 0; j < this.props.mastermindArray.length; j++) {
 
-      this.state.activeRow++;
-      this.forceUpdate();
-      console.log("active row is", this.state.activeRow);
-      console.log(`mastermind array is:`,this.props.mastermindArray);
-      console.log(`our guess is:`,guess);
-      console.log(`There were ${this.state.precise} precise guesses`);
-      console.log(`There were ${this.state.partial} partial guesses`);
+                if (guess[i] === this.props.mastermindArray[j]) {
+                    for (let k = 0; k < this.props.mastermindArray.length; k++) {
+                        if (guess[i] === this.props.mastermindArray[k] && checkColor[k] === false) {
 
-      if (this.state.precise === 4) {
-          this.state.winner = true;
-          console.log("You win!");
-      } else {
-          console.log("Wrong!!!");
-      }
+                            checkColor[k] = true;
+
+                            partial += 1;
+                            break;
+                        }
+                    }
+                    break;
+                }
+            }
+        }
+        partial = Math.max(partial - precise, 0);
+
+        activeRow++;
+        this.forceUpdate();
+        console.log("active row is", activeRow);
+        console.log(`mastermind array is:`, this.props.mastermindArray);
+        console.log(`our guess is:`, guess);
+        console.log(`There were ${precise} precise guesses`);
+        console.log(`There were ${partial} partial guesses`);
+
+        if (precise === 4) {
+            this.setState({winner: true, activeRow, partial, precise});
+            console.log("You win!");
+        } else {
+            console.log("Wrong!!!");
+        }
 
 
+    };
 
-
-    }
-
-    render () {
+    render() {
 
         /*
-        const rows = [];
+         const rows = [];
 
-        const row = {
-            activeColor: this.state.activeColor,
-            rowFilled: () => console.log('Row complete'),
-            /*smallCircles: ['white', 'white', 'white', 'white',],
-        };
+         const row = {
+         activeColor: this.state.activeColor,
+         rowFilled: () => console.log('Row complete'),
+         /*smallCircles: ['white', 'white', 'white', 'white',],
+         };
 
-        for (let i = 0; i < 10; i++) {
-            rows.push(row);
-        }
-        */
+         for (let i = 0; i < 10; i++) {
+         rows.push(row);
+         }
+         */
 
-        var reactRows = this.state.mastermindLayout.map(
+        const reactRows = this.state.mastermindLayout.map(
             (row, index) => {
-                var rowColorsArray = this.state.mastermindLayout[index];
+                const rowColorsArray = this.state.mastermindLayout[index];
                 return (
                     <Row
                         key={index}
@@ -154,19 +147,19 @@ class App extends Component {
         // smallCircles={row.smallCircles}
 
         /*
-            const activeColor = this.props.colorCircles.map(
-            (color, index) => <Circle
-                key={index}
-                color={color}
-                size="big"
-                css={
-                    {
-                        borderColor: color === this.state.activeColor ? 'red' : 'black'
-                    }
-                }
-                onClick={() => this.setActiveColor(color)}/>
-        );
-        */
+         const activeColor = this.props.colorCircles.map(
+         (color, index) => <Circle
+         key={index}
+         color={color}
+         size="big"
+         css={
+         {
+         borderColor: color === this.state.activeColor ? 'red' : 'black'
+         }
+         }
+         onClick={() => this.setActiveColor(color)}/>
+         );
+         */
 
         return (
             <div className="App">

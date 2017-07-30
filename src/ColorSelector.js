@@ -38,6 +38,7 @@ class ColorSelector extends Component {
                     src={headCheck}
                     onClick={this.props.comparisonCheck}
                     title="Check how smart you are"
+                    alt="head check"
 
                 />
 
