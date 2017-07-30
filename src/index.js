@@ -8,12 +8,12 @@ let colorCircles = ['red', 'orange', 'yellow', 'green', 'blue', 'indigo '];
 
 function createMastermindArray () {
   const rowLength= 4;
-  const mastermindArray = [];
+  const mastermindAnswers = [];
   for (let i=0; i < rowLength; i++) {
     let color = colorCircles[Math.floor(Math.random() * 6)];
-    mastermindArray.push(color)
+    mastermindAnswers.push(color)
   }
-  return mastermindArray;
+  return mastermindAnswers;
 }
 
 const mastermindArray = createMastermindArray();
@@ -21,7 +21,7 @@ const mastermindArray = createMastermindArray();
 ReactDOM.render(
   <App
     colorCircles={colorCircles}
-    mastermindArray={mastermindArray}
+    mastermindAnswers={mastermindArray}
   />,
   document.getElementById('root')
 );
