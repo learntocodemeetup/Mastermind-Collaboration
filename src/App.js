@@ -57,52 +57,46 @@ class App extends Component {
     };
 
     comparisonCheck = () => {
+        const checkColor = [true, true, true, true];
+        const guesses = this.state.mastermindLayout[this.state.activeRow];
+        const mastermindAnswers = this.props.mastermindAnswers;
+        const feedback = ['white', 'white', 'white', 'white'];
 
-        let precise = 0;
-        let partial = 0;
-        let activeRow = this.state.activeRow;
-
-        const checkColor = [false, false, false, false];
-
-        console.log("active row is:", this.state.mastermindLayout[this.state.activeRow]);
-        let guessRow = this.state.mastermindLayout[this.state.activeRow];
-        guessRow.forEach(
-            (guess, index) => {
-                let mastermindAnswers = this.props.mastermindAnswers;
-
-                if (guess === mastermindAnswers) {
-                    precise += 1;
-                }
-
-                if (mastermindAnswers.indexOf(guess) !== -1 && checkColor[index] === false) {
-                    checkColor[index] = true;
-                    partial++;
+        guesses.forEach(
+            (guessColor, guessIndex) => {
+                if (guessColor === mastermindAnswers[guessIndex]) {
+                    feedback[guessIndex] = 'black';
+                    checkColor[guessIndex] = false;
                 }
             }
         );
 
-        partial = Math.max(partial - precise, 0);
+        guesses.forEach(
+            (guessColor, guessIndex) => {
+                const canCheckGuess = checkColor[guessIndex];
+                if (canCheckGuess) {
+                    mastermindAnswers.find(
+                        (answerColor, answerIndex) => {
+                            const canCheckAnswer = checkColor[answerIndex];
+                            if (!canCheckAnswer) return false;
 
-        activeRow++;
-        console.log("active row is", activeRow);
-        console.log(`mastermind array is:`, this.props.mastermindAnswers);
-        console.log(`our guess is:`, guessRow);
-        console.log(`There were ${precise} precise guesses`);
-        console.log(`There were ${partial} partial guesses`);
+                            if (answerColor === guessColor) {
+                                feedback[guessIndex] = 'red';
+                                checkColor[answerIndex] = false;
+                                return true;
+                            }
+                            return false;
+                        }
+                    );
+                }
+            }
+        );
 
-        if (precise === 4) {
-            this.setState({winner: true, activeRow, partial, precise});
-            console.log("You win!");
-        } else {
-            this.setState({winner: false, activeRow, partial, precise});
-            console.log("Wrong!!!");
-        }
-
-
+        return feedback.sort();
     };
 
     render() {
-        console.log(this.state);
+        console.log(this.props.mastermindAnswers);
         const reactRows = this.state.mastermindLayout.map(
             (row, index) => {
                 const rowColorsArray = this.state.mastermindLayout[index];
