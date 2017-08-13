@@ -1,0 +1,1261 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`expect App to load into initial state 1`] = `
+ShallowWrapper {
+  "complexSelector": ComplexSelector {
+    "buildPredicate": [Function],
+    "childrenOfNode": [Function],
+    "findWhereUnwrapped": [Function],
+  },
+  "length": 1,
+  "node": <div
+    className="App"
+>
+    <h1>
+        Mastermind
+    </h1>
+    <h1>
+         this should not exist 
+    </h1>
+    
+    <section
+        className="gameBoard"
+    >
+        <div
+            className="rows"
+        >
+            <Row
+                activeColor="red"
+                feedbackArray={
+                    Array [
+                        "white",
+                        "white",
+                        "white",
+                        "white",
+                      ]
+                }
+                isActiveRow={true}
+                rowColorsArray={
+                    Array [
+                        "white",
+                        "white",
+                        "white",
+                        "white",
+                      ]
+                }
+                rowIndex={0}
+                setCircleColor={[Function]}
+            />
+            <Row
+                activeColor="red"
+                feedbackArray={
+                    Array [
+                        "white",
+                        "white",
+                        "white",
+                        "white",
+                      ]
+                }
+                isActiveRow={false}
+                rowColorsArray={
+                    Array [
+                        "white",
+                        "white",
+                        "white",
+                        "white",
+                      ]
+                }
+                rowIndex={1}
+                setCircleColor={[Function]}
+            />
+            <Row
+                activeColor="red"
+                feedbackArray={
+                    Array [
+                        "white",
+                        "white",
+                        "white",
+                        "white",
+                      ]
+                }
+                isActiveRow={false}
+                rowColorsArray={
+                    Array [
+                        "white",
+                        "white",
+                        "white",
+                        "white",
+                      ]
+                }
+                rowIndex={2}
+                setCircleColor={[Function]}
+            />
+            <Row
+                activeColor="red"
+                feedbackArray={
+                    Array [
+                        "white",
+                        "white",
+                        "white",
+                        "white",
+                      ]
+                }
+                isActiveRow={false}
+                rowColorsArray={
+                    Array [
+                        "white",
+                        "white",
+                        "white",
+                        "white",
+                      ]
+                }
+                rowIndex={3}
+                setCircleColor={[Function]}
+            />
+            <Row
+                activeColor="red"
+                feedbackArray={
+                    Array [
+                        "white",
+                        "white",
+                        "white",
+                        "white",
+                      ]
+                }
+                isActiveRow={false}
+                rowColorsArray={
+                    Array [
+                        "white",
+                        "white",
+                        "white",
+                        "white",
+                      ]
+                }
+                rowIndex={4}
+                setCircleColor={[Function]}
+            />
+            <Row
+                activeColor="red"
+                feedbackArray={
+                    Array [
+                        "white",
+                        "white",
+                        "white",
+                        "white",
+                      ]
+                }
+                isActiveRow={false}
+                rowColorsArray={
+                    Array [
+                        "white",
+                        "white",
+                        "white",
+                        "white",
+                      ]
+                }
+                rowIndex={5}
+                setCircleColor={[Function]}
+            />
+            <Row
+                activeColor="red"
+                feedbackArray={
+                    Array [
+                        "white",
+                        "white",
+                        "white",
+                        "white",
+                      ]
+                }
+                isActiveRow={false}
+                rowColorsArray={
+                    Array [
+                        "white",
+                        "white",
+                        "white",
+                        "white",
+                      ]
+                }
+                rowIndex={6}
+                setCircleColor={[Function]}
+            />
+            <Row
+                activeColor="red"
+                feedbackArray={
+                    Array [
+                        "white",
+                        "white",
+                        "white",
+                        "white",
+                      ]
+                }
+                isActiveRow={false}
+                rowColorsArray={
+                    Array [
+                        "white",
+                        "white",
+                        "white",
+                        "white",
+                      ]
+                }
+                rowIndex={7}
+                setCircleColor={[Function]}
+            />
+            <Row
+                activeColor="red"
+                feedbackArray={
+                    Array [
+                        "white",
+                        "white",
+                        "white",
+                        "white",
+                      ]
+                }
+                isActiveRow={false}
+                rowColorsArray={
+                    Array [
+                        "white",
+                        "white",
+                        "white",
+                        "white",
+                      ]
+                }
+                rowIndex={8}
+                setCircleColor={[Function]}
+            />
+            <Row
+                activeColor="red"
+                feedbackArray={
+                    Array [
+                        "white",
+                        "white",
+                        "white",
+                        "white",
+                      ]
+                }
+                isActiveRow={false}
+                rowColorsArray={
+                    Array [
+                        "white",
+                        "white",
+                        "white",
+                        "white",
+                      ]
+                }
+                rowIndex={9}
+                setCircleColor={[Function]}
+            />
+        </div>
+        <ColorSelector
+            activeColor="red"
+            colorsArray={
+                Array [
+                    "red",
+                    "orange",
+                    "yellow",
+                    "green",
+                    "blue",
+                    "indigo",
+                  ]
+            }
+            comparisonCheck={[Function]}
+            setActiveColor={[Function]}
+        />
+    </section>
+</div>,
+  "nodes": Array [
+    <div
+      className="App"
+>
+      <h1>
+            Mastermind
+      </h1>
+      <h1>
+             this should not exist 
+      </h1>
+      
+      <section
+            className="gameBoard"
+      >
+            <div
+                  className="rows"
+            >
+                  <Row
+                        activeColor="red"
+                        feedbackArray={
+                              Array [
+                                    "white",
+                                    "white",
+                                    "white",
+                                    "white",
+                                  ]
+                        }
+                        isActiveRow={true}
+                        rowColorsArray={
+                              Array [
+                                    "white",
+                                    "white",
+                                    "white",
+                                    "white",
+                                  ]
+                        }
+                        rowIndex={0}
+                        setCircleColor={[Function]}
+                  />
+                  <Row
+                        activeColor="red"
+                        feedbackArray={
+                              Array [
+                                    "white",
+                                    "white",
+                                    "white",
+                                    "white",
+                                  ]
+                        }
+                        isActiveRow={false}
+                        rowColorsArray={
+                              Array [
+                                    "white",
+                                    "white",
+                                    "white",
+                                    "white",
+                                  ]
+                        }
+                        rowIndex={1}
+                        setCircleColor={[Function]}
+                  />
+                  <Row
+                        activeColor="red"
+                        feedbackArray={
+                              Array [
+                                    "white",
+                                    "white",
+                                    "white",
+                                    "white",
+                                  ]
+                        }
+                        isActiveRow={false}
+                        rowColorsArray={
+                              Array [
+                                    "white",
+                                    "white",
+                                    "white",
+                                    "white",
+                                  ]
+                        }
+                        rowIndex={2}
+                        setCircleColor={[Function]}
+                  />
+                  <Row
+                        activeColor="red"
+                        feedbackArray={
+                              Array [
+                                    "white",
+                                    "white",
+                                    "white",
+                                    "white",
+                                  ]
+                        }
+                        isActiveRow={false}
+                        rowColorsArray={
+                              Array [
+                                    "white",
+                                    "white",
+                                    "white",
+                                    "white",
+                                  ]
+                        }
+                        rowIndex={3}
+                        setCircleColor={[Function]}
+                  />
+                  <Row
+                        activeColor="red"
+                        feedbackArray={
+                              Array [
+                                    "white",
+                                    "white",
+                                    "white",
+                                    "white",
+                                  ]
+                        }
+                        isActiveRow={false}
+                        rowColorsArray={
+                              Array [
+                                    "white",
+                                    "white",
+                                    "white",
+                                    "white",
+                                  ]
+                        }
+                        rowIndex={4}
+                        setCircleColor={[Function]}
+                  />
+                  <Row
+                        activeColor="red"
+                        feedbackArray={
+                              Array [
+                                    "white",
+                                    "white",
+                                    "white",
+                                    "white",
+                                  ]
+                        }
+                        isActiveRow={false}
+                        rowColorsArray={
+                              Array [
+                                    "white",
+                                    "white",
+                                    "white",
+                                    "white",
+                                  ]
+                        }
+                        rowIndex={5}
+                        setCircleColor={[Function]}
+                  />
+                  <Row
+                        activeColor="red"
+                        feedbackArray={
+                              Array [
+                                    "white",
+                                    "white",
+                                    "white",
+                                    "white",
+                                  ]
+                        }
+                        isActiveRow={false}
+                        rowColorsArray={
+                              Array [
+                                    "white",
+                                    "white",
+                                    "white",
+                                    "white",
+                                  ]
+                        }
+                        rowIndex={6}
+                        setCircleColor={[Function]}
+                  />
+                  <Row
+                        activeColor="red"
+                        feedbackArray={
+                              Array [
+                                    "white",
+                                    "white",
+                                    "white",
+                                    "white",
+                                  ]
+                        }
+                        isActiveRow={false}
+                        rowColorsArray={
+                              Array [
+                                    "white",
+                                    "white",
+                                    "white",
+                                    "white",
+                                  ]
+                        }
+                        rowIndex={7}
+                        setCircleColor={[Function]}
+                  />
+                  <Row
+                        activeColor="red"
+                        feedbackArray={
+                              Array [
+                                    "white",
+                                    "white",
+                                    "white",
+                                    "white",
+                                  ]
+                        }
+                        isActiveRow={false}
+                        rowColorsArray={
+                              Array [
+                                    "white",
+                                    "white",
+                                    "white",
+                                    "white",
+                                  ]
+                        }
+                        rowIndex={8}
+                        setCircleColor={[Function]}
+                  />
+                  <Row
+                        activeColor="red"
+                        feedbackArray={
+                              Array [
+                                    "white",
+                                    "white",
+                                    "white",
+                                    "white",
+                                  ]
+                        }
+                        isActiveRow={false}
+                        rowColorsArray={
+                              Array [
+                                    "white",
+                                    "white",
+                                    "white",
+                                    "white",
+                                  ]
+                        }
+                        rowIndex={9}
+                        setCircleColor={[Function]}
+                  />
+            </div>
+            <ColorSelector
+                  activeColor="red"
+                  colorsArray={
+                        Array [
+                              "red",
+                              "orange",
+                              "yellow",
+                              "green",
+                              "blue",
+                              "indigo",
+                            ]
+                  }
+                  comparisonCheck={[Function]}
+                  setActiveColor={[Function]}
+            />
+      </section>
+</div>,
+  ],
+  "options": Object {},
+  "renderer": ReactShallowRenderer {
+    "_instance": ShallowComponentWrapper {
+      "_calledComponentWillUnmount": false,
+      "_compositeType": 0,
+      "_context": Object {},
+      "_currentElement": <App
+        colorCircles={
+                Array [
+                        "red",
+                        "orange",
+                        "yellow",
+                        "green",
+                        "blue",
+                        "indigo",
+                      ]
+        }
+        mastermindAnswers={
+                Array [
+                        "red",
+                        "orange",
+                        "yellow",
+                        "green",
+                      ]
+        }
+/>,
+      "_debugID": 1,
+      "_hostContainerInfo": null,
+      "_hostParent": null,
+      "_instance": App {
+        "_reactInternalInstance": [Circular],
+        "context": Object {},
+        "judgeRow": [Function],
+        "props": Object {
+          "colorCircles": Array [
+            "red",
+            "orange",
+            "yellow",
+            "green",
+            "blue",
+            "indigo",
+          ],
+          "mastermindAnswers": Array [
+            "red",
+            "orange",
+            "yellow",
+            "green",
+          ],
+        },
+        "refs": Object {},
+        "setActiveColor": [Function],
+        "setCircleColor": [Function],
+        "state": Object {
+          "activeColor": "red",
+          "activeRow": 0,
+          "feedbackArray": Array [
+            Array [
+              "white",
+              "white",
+              "white",
+              "white",
+            ],
+            Array [
+              "white",
+              "white",
+              "white",
+              "white",
+            ],
+            Array [
+              "white",
+              "white",
+              "white",
+              "white",
+            ],
+            Array [
+              "white",
+              "white",
+              "white",
+              "white",
+            ],
+            Array [
+              "white",
+              "white",
+              "white",
+              "white",
+            ],
+            Array [
+              "white",
+              "white",
+              "white",
+              "white",
+            ],
+            Array [
+              "white",
+              "white",
+              "white",
+              "white",
+            ],
+            Array [
+              "white",
+              "white",
+              "white",
+              "white",
+            ],
+            Array [
+              "white",
+              "white",
+              "white",
+              "white",
+            ],
+            Array [
+              "white",
+              "white",
+              "white",
+              "white",
+            ],
+          ],
+          "mastermindLayout": Array [
+            Array [
+              "white",
+              "white",
+              "white",
+              "white",
+            ],
+            Array [
+              "white",
+              "white",
+              "white",
+              "white",
+            ],
+            Array [
+              "white",
+              "white",
+              "white",
+              "white",
+            ],
+            Array [
+              "white",
+              "white",
+              "white",
+              "white",
+            ],
+            Array [
+              "white",
+              "white",
+              "white",
+              "white",
+            ],
+            Array [
+              "white",
+              "white",
+              "white",
+              "white",
+            ],
+            Array [
+              "white",
+              "white",
+              "white",
+              "white",
+            ],
+            Array [
+              "white",
+              "white",
+              "white",
+              "white",
+            ],
+            Array [
+              "white",
+              "white",
+              "white",
+              "white",
+            ],
+            Array [
+              "white",
+              "white",
+              "white",
+              "white",
+            ],
+          ],
+          "winner": false,
+        },
+        "updater": Object {
+          "enqueueCallback": [Function],
+          "enqueueCallbackInternal": [Function],
+          "enqueueElementInternal": [Function],
+          "enqueueForceUpdate": [Function],
+          "enqueueReplaceState": [Function],
+          "enqueueSetState": [Function],
+          "isMounted": [Function],
+          "validateCallback": [Function],
+        },
+      },
+      "_mountOrder": 1,
+      "_pendingCallbacks": null,
+      "_pendingElement": null,
+      "_pendingForceUpdate": false,
+      "_pendingReplaceState": false,
+      "_pendingStateQueue": null,
+      "_renderedComponent": NoopInternalComponent {
+        "_currentElement": <div
+          className="App"
+>
+          <h1>
+                    Mastermind
+          </h1>
+          <h1>
+                     this should not exist 
+          </h1>
+          
+          <section
+                    className="gameBoard"
+          >
+                    <div
+                              className="rows"
+                    >
+                              <Row
+                                        activeColor="red"
+                                        feedbackArray={
+                                                  Array [
+                                                            "white",
+                                                            "white",
+                                                            "white",
+                                                            "white",
+                                                          ]
+                                        }
+                                        isActiveRow={true}
+                                        rowColorsArray={
+                                                  Array [
+                                                            "white",
+                                                            "white",
+                                                            "white",
+                                                            "white",
+                                                          ]
+                                        }
+                                        rowIndex={0}
+                                        setCircleColor={[Function]}
+                              />
+                              <Row
+                                        activeColor="red"
+                                        feedbackArray={
+                                                  Array [
+                                                            "white",
+                                                            "white",
+                                                            "white",
+                                                            "white",
+                                                          ]
+                                        }
+                                        isActiveRow={false}
+                                        rowColorsArray={
+                                                  Array [
+                                                            "white",
+                                                            "white",
+                                                            "white",
+                                                            "white",
+                                                          ]
+                                        }
+                                        rowIndex={1}
+                                        setCircleColor={[Function]}
+                              />
+                              <Row
+                                        activeColor="red"
+                                        feedbackArray={
+                                                  Array [
+                                                            "white",
+                                                            "white",
+                                                            "white",
+                                                            "white",
+                                                          ]
+                                        }
+                                        isActiveRow={false}
+                                        rowColorsArray={
+                                                  Array [
+                                                            "white",
+                                                            "white",
+                                                            "white",
+                                                            "white",
+                                                          ]
+                                        }
+                                        rowIndex={2}
+                                        setCircleColor={[Function]}
+                              />
+                              <Row
+                                        activeColor="red"
+                                        feedbackArray={
+                                                  Array [
+                                                            "white",
+                                                            "white",
+                                                            "white",
+                                                            "white",
+                                                          ]
+                                        }
+                                        isActiveRow={false}
+                                        rowColorsArray={
+                                                  Array [
+                                                            "white",
+                                                            "white",
+                                                            "white",
+                                                            "white",
+                                                          ]
+                                        }
+                                        rowIndex={3}
+                                        setCircleColor={[Function]}
+                              />
+                              <Row
+                                        activeColor="red"
+                                        feedbackArray={
+                                                  Array [
+                                                            "white",
+                                                            "white",
+                                                            "white",
+                                                            "white",
+                                                          ]
+                                        }
+                                        isActiveRow={false}
+                                        rowColorsArray={
+                                                  Array [
+                                                            "white",
+                                                            "white",
+                                                            "white",
+                                                            "white",
+                                                          ]
+                                        }
+                                        rowIndex={4}
+                                        setCircleColor={[Function]}
+                              />
+                              <Row
+                                        activeColor="red"
+                                        feedbackArray={
+                                                  Array [
+                                                            "white",
+                                                            "white",
+                                                            "white",
+                                                            "white",
+                                                          ]
+                                        }
+                                        isActiveRow={false}
+                                        rowColorsArray={
+                                                  Array [
+                                                            "white",
+                                                            "white",
+                                                            "white",
+                                                            "white",
+                                                          ]
+                                        }
+                                        rowIndex={5}
+                                        setCircleColor={[Function]}
+                              />
+                              <Row
+                                        activeColor="red"
+                                        feedbackArray={
+                                                  Array [
+                                                            "white",
+                                                            "white",
+                                                            "white",
+                                                            "white",
+                                                          ]
+                                        }
+                                        isActiveRow={false}
+                                        rowColorsArray={
+                                                  Array [
+                                                            "white",
+                                                            "white",
+                                                            "white",
+                                                            "white",
+                                                          ]
+                                        }
+                                        rowIndex={6}
+                                        setCircleColor={[Function]}
+                              />
+                              <Row
+                                        activeColor="red"
+                                        feedbackArray={
+                                                  Array [
+                                                            "white",
+                                                            "white",
+                                                            "white",
+                                                            "white",
+                                                          ]
+                                        }
+                                        isActiveRow={false}
+                                        rowColorsArray={
+                                                  Array [
+                                                            "white",
+                                                            "white",
+                                                            "white",
+                                                            "white",
+                                                          ]
+                                        }
+                                        rowIndex={7}
+                                        setCircleColor={[Function]}
+                              />
+                              <Row
+                                        activeColor="red"
+                                        feedbackArray={
+                                                  Array [
+                                                            "white",
+                                                            "white",
+                                                            "white",
+                                                            "white",
+                                                          ]
+                                        }
+                                        isActiveRow={false}
+                                        rowColorsArray={
+                                                  Array [
+                                                            "white",
+                                                            "white",
+                                                            "white",
+                                                            "white",
+                                                          ]
+                                        }
+                                        rowIndex={8}
+                                        setCircleColor={[Function]}
+                              />
+                              <Row
+                                        activeColor="red"
+                                        feedbackArray={
+                                                  Array [
+                                                            "white",
+                                                            "white",
+                                                            "white",
+                                                            "white",
+                                                          ]
+                                        }
+                                        isActiveRow={false}
+                                        rowColorsArray={
+                                                  Array [
+                                                            "white",
+                                                            "white",
+                                                            "white",
+                                                            "white",
+                                                          ]
+                                        }
+                                        rowIndex={9}
+                                        setCircleColor={[Function]}
+                              />
+                    </div>
+                    <ColorSelector
+                              activeColor="red"
+                              colorsArray={
+                                        Array [
+                                                  "red",
+                                                  "orange",
+                                                  "yellow",
+                                                  "green",
+                                                  "blue",
+                                                  "indigo",
+                                                ]
+                              }
+                              comparisonCheck={[Function]}
+                              setActiveColor={[Function]}
+                    />
+          </section>
+</div>,
+        "_debugID": 2,
+        "_renderedOutput": <div
+          className="App"
+>
+          <h1>
+                    Mastermind
+          </h1>
+          <h1>
+                     this should not exist 
+          </h1>
+          
+          <section
+                    className="gameBoard"
+          >
+                    <div
+                              className="rows"
+                    >
+                              <Row
+                                        activeColor="red"
+                                        feedbackArray={
+                                                  Array [
+                                                            "white",
+                                                            "white",
+                                                            "white",
+                                                            "white",
+                                                          ]
+                                        }
+                                        isActiveRow={true}
+                                        rowColorsArray={
+                                                  Array [
+                                                            "white",
+                                                            "white",
+                                                            "white",
+                                                            "white",
+                                                          ]
+                                        }
+                                        rowIndex={0}
+                                        setCircleColor={[Function]}
+                              />
+                              <Row
+                                        activeColor="red"
+                                        feedbackArray={
+                                                  Array [
+                                                            "white",
+                                                            "white",
+                                                            "white",
+                                                            "white",
+                                                          ]
+                                        }
+                                        isActiveRow={false}
+                                        rowColorsArray={
+                                                  Array [
+                                                            "white",
+                                                            "white",
+                                                            "white",
+                                                            "white",
+                                                          ]
+                                        }
+                                        rowIndex={1}
+                                        setCircleColor={[Function]}
+                              />
+                              <Row
+                                        activeColor="red"
+                                        feedbackArray={
+                                                  Array [
+                                                            "white",
+                                                            "white",
+                                                            "white",
+                                                            "white",
+                                                          ]
+                                        }
+                                        isActiveRow={false}
+                                        rowColorsArray={
+                                                  Array [
+                                                            "white",
+                                                            "white",
+                                                            "white",
+                                                            "white",
+                                                          ]
+                                        }
+                                        rowIndex={2}
+                                        setCircleColor={[Function]}
+                              />
+                              <Row
+                                        activeColor="red"
+                                        feedbackArray={
+                                                  Array [
+                                                            "white",
+                                                            "white",
+                                                            "white",
+                                                            "white",
+                                                          ]
+                                        }
+                                        isActiveRow={false}
+                                        rowColorsArray={
+                                                  Array [
+                                                            "white",
+                                                            "white",
+                                                            "white",
+                                                            "white",
+                                                          ]
+                                        }
+                                        rowIndex={3}
+                                        setCircleColor={[Function]}
+                              />
+                              <Row
+                                        activeColor="red"
+                                        feedbackArray={
+                                                  Array [
+                                                            "white",
+                                                            "white",
+                                                            "white",
+                                                            "white",
+                                                          ]
+                                        }
+                                        isActiveRow={false}
+                                        rowColorsArray={
+                                                  Array [
+                                                            "white",
+                                                            "white",
+                                                            "white",
+                                                            "white",
+                                                          ]
+                                        }
+                                        rowIndex={4}
+                                        setCircleColor={[Function]}
+                              />
+                              <Row
+                                        activeColor="red"
+                                        feedbackArray={
+                                                  Array [
+                                                            "white",
+                                                            "white",
+                                                            "white",
+                                                            "white",
+                                                          ]
+                                        }
+                                        isActiveRow={false}
+                                        rowColorsArray={
+                                                  Array [
+                                                            "white",
+                                                            "white",
+                                                            "white",
+                                                            "white",
+                                                          ]
+                                        }
+                                        rowIndex={5}
+                                        setCircleColor={[Function]}
+                              />
+                              <Row
+                                        activeColor="red"
+                                        feedbackArray={
+                                                  Array [
+                                                            "white",
+                                                            "white",
+                                                            "white",
+                                                            "white",
+                                                          ]
+                                        }
+                                        isActiveRow={false}
+                                        rowColorsArray={
+                                                  Array [
+                                                            "white",
+                                                            "white",
+                                                            "white",
+                                                            "white",
+                                                          ]
+                                        }
+                                        rowIndex={6}
+                                        setCircleColor={[Function]}
+                              />
+                              <Row
+                                        activeColor="red"
+                                        feedbackArray={
+                                                  Array [
+                                                            "white",
+                                                            "white",
+                                                            "white",
+                                                            "white",
+                                                          ]
+                                        }
+                                        isActiveRow={false}
+                                        rowColorsArray={
+                                                  Array [
+                                                            "white",
+                                                            "white",
+                                                            "white",
+                                                            "white",
+                                                          ]
+                                        }
+                                        rowIndex={7}
+                                        setCircleColor={[Function]}
+                              />
+                              <Row
+                                        activeColor="red"
+                                        feedbackArray={
+                                                  Array [
+                                                            "white",
+                                                            "white",
+                                                            "white",
+                                                            "white",
+                                                          ]
+                                        }
+                                        isActiveRow={false}
+                                        rowColorsArray={
+                                                  Array [
+                                                            "white",
+                                                            "white",
+                                                            "white",
+                                                            "white",
+                                                          ]
+                                        }
+                                        rowIndex={8}
+                                        setCircleColor={[Function]}
+                              />
+                              <Row
+                                        activeColor="red"
+                                        feedbackArray={
+                                                  Array [
+                                                            "white",
+                                                            "white",
+                                                            "white",
+                                                            "white",
+                                                          ]
+                                        }
+                                        isActiveRow={false}
+                                        rowColorsArray={
+                                                  Array [
+                                                            "white",
+                                                            "white",
+                                                            "white",
+                                                            "white",
+                                                          ]
+                                        }
+                                        rowIndex={9}
+                                        setCircleColor={[Function]}
+                              />
+                    </div>
+                    <ColorSelector
+                              activeColor="red"
+                              colorsArray={
+                                        Array [
+                                                  "red",
+                                                  "orange",
+                                                  "yellow",
+                                                  "green",
+                                                  "blue",
+                                                  "indigo",
+                                                ]
+                              }
+                              comparisonCheck={[Function]}
+                              setActiveColor={[Function]}
+                    />
+          </section>
+</div>,
+      },
+      "_renderedNodeType": 0,
+      "_rootNodeID": 0,
+      "_topLevelWrapper": null,
+      "_updateBatchNumber": null,
+      "_warnedAboutRefsInRender": false,
+    },
+    "getRenderOutput": [Function],
+    "render": [Function],
+  },
+  "root": [Circular],
+  "unrendered": <App
+    colorCircles={
+        Array [
+            "red",
+            "orange",
+            "yellow",
+            "green",
+            "blue",
+            "indigo",
+          ]
+    }
+    mastermindAnswers={
+        Array [
+            "red",
+            "orange",
+            "yellow",
+            "green",
+          ]
+    }
+/>,
+}
+`;

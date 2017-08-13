@@ -11,8 +11,6 @@ class Row extends Component {
         rowIndex: PropTypes.number.isRequired,
         rowColorsArray: PropTypes.array.isRequired,
         setCircleColor: PropTypes.func.isRequired,
-        precise: PropTypes.number.isRequired,
-        partial: PropTypes.number.isRequired,
         activeColor: PropTypes.string.isRequired
     };
 
@@ -21,12 +19,12 @@ class Row extends Component {
         const smallCircleStyle = {borderColor: 'black', borderWidth: '1px'};
         const activeRowClass = this.props.isActiveRow ? "row active-row" : "row";
 
-        const progress = this.props.feedbackArray.map(
-            (value, index) => {
+        const feedback = this.props.feedbackArray.map(
+            (color, index) => {
                 return (
                     <SmallCircle
                         key={index}
-                        color={value}
+                        color={color}
                         size='small'
                         css={smallCircleStyle}
                     />
@@ -54,7 +52,7 @@ class Row extends Component {
 
             <div className={activeRowClass}>
                 { coloredCircles }
-                { progress }
+                { feedback }
             </div>
         );
     }

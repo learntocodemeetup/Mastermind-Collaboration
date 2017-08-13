@@ -4,7 +4,7 @@ import './index.css';
 import App from './App';
 import registerServiceWorker from './registerServiceWorker';
 
-let colorCircles = ['red', 'orange', 'yellow', 'green', 'blue', 'indigo '];
+let colorCircles = ['red', 'orange', 'yellow', 'green', 'blue', 'indigo'];
 
 function createMastermindArray () {
   const rowLength= 4;

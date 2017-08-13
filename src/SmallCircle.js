@@ -17,6 +17,7 @@ class SmallCircle extends Component {
 
         circleStyle.width = smallSize;
         circleStyle.height = smallSize;
+        circleStyle.backgroundColor = this.props.color;
         return (
             <div
                 className="circle"

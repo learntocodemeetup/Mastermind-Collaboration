@@ -22,8 +22,6 @@ class App extends Component {
             activeColor: 'red',
             activeRow: 0,
             winner: false,
-            precise: 0,
-            partial: 0
         };
         let mastermindLayout = [];
         for (let i = 0; i < ROWS_HEIGHT; i++) {
@@ -56,11 +54,9 @@ class App extends Component {
         }
     };
 
-    comparisonCheck = () => {
-        const checkColor = [true, true, true, true];
-        const guesses = this.state.mastermindLayout[this.state.activeRow];
-        const mastermindAnswers = this.props.mastermindAnswers;
+    comparisonCheck(guesses, mastermindAnswers) {
         const feedback = ['white', 'white', 'white', 'white'];
+        const checkColor = [true, true, true, true];
 
         guesses.forEach(
             (guessColor, guessIndex) => {
@@ -91,12 +87,36 @@ class App extends Component {
                 }
             }
         );
-
         return feedback.sort();
     };
 
+    judgeRow = () => {
+        const guesses = this.state.mastermindLayout[this.state.activeRow];
+        const mastermindAnswers = this.props.mastermindAnswers;
+
+        if(guesses.indexOf('white') !== -1 && !this.state.winner) return null;
+
+        const feedback = this.comparisonCheck(guesses, mastermindAnswers);
+        const isWinner = feedback.every((color) => color === 'black');
+
+        const feedbackArray = this.state.feedbackArray.map(
+            (val, index) => {
+                if (index === this.state.activeRow) {
+                    return feedback;
+                }
+                else {
+                    return val;
+                }
+            }
+        );
+
+        let activeRow = this.state.activeRow;
+        if(!isWinner) activeRow++;
+
+        this.setState({feedbackArray: feedbackArray, winner: isWinner, activeRow: activeRow})
+    };
+
     render() {
-        console.log(this.props.mastermindAnswers);
         const reactRows = this.state.mastermindLayout.map(
             (row, index) => {
                 const rowColorsArray = this.state.mastermindLayout[index];
@@ -111,8 +131,6 @@ class App extends Component {
                         isActiveRow={isActive}
                         rowColorsArray={rowColorsArray}
                         setCircleColor={this.setCircleColor}
-                        precise={this.state.precise}
-                        partial={this.state.partial}
                         activeColor={this.state.activeColor}
                     />
                 );
@@ -122,6 +140,7 @@ class App extends Component {
         return (
             <div className="App">
                 <h1>Mastermind</h1>
+                <h1> this should not exist </h1>
                 {this.state.winner ? <p>Winner!</p> : ""}
                 <section className="gameBoard">
                     <div className="rows">
@@ -131,7 +150,7 @@ class App extends Component {
                         activeColor={this.state.activeColor}
                         setActiveColor={this.setActiveColor}
                         colorsArray={["red", "orange", "yellow", "green", "blue", "indigo"]}
-                        comparisonCheck={this.comparisonCheck}
+                        comparisonCheck={this.judgeRow}
                     />
 
                 </section>
